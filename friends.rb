@@ -16,18 +16,16 @@ end
 
 def add_friend(person, friend)
   person[:friends].push(friend)
-  return person[:friends].length
 end
 
 def remove_friend(person, friend)
   person[:friends].delete(friend)
-  return person[:friends].length
 end
 
 def total_money(array)
   total = 0
-  for money in array
-    total += money[:monies]
+  for person in array
+    total += person[:monies]
   end
   return total
 end
@@ -39,17 +37,17 @@ end
 
 def everyone_snacks(array)
   set_food = []
-  for snack in array
-    set_food.push(snack[:favourites][:snacks])
+  for person in array
+    set_food.push(person[:favourites][:snacks])
   end
   return set_food.flatten
 end
 
 def no_friends(array)
   friend_array = []
-  for number in array
-    if number[:friends].length == 0
-      friend_array.push(number[:name])
+  for person in array
+    if person[:friends].length == 0
+      friend_array.push(person[:name])
     end
   end
   return friend_array
