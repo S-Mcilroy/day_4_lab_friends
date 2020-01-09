@@ -33,8 +33,8 @@ def total_money(array)
 end
 
 def loan_money(lender, lendee, amount)
-  lender[:monies] = lender[:monies] - amount
-  lendee[:monies] = lendee[:monies] + amount
+  lender[:monies] -= amount
+  lendee[:monies] += amount
 end
 
 def everyone_snacks(array)
