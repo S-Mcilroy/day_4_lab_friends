@@ -15,13 +15,13 @@ def likes_to_eat(person, food)
 end
 
 def add_friend(person, friend)
- person[:friends].push(friend)
- return person[:friends].length
+  person[:friends].push(friend)
+  return person[:friends].length
 end
 
 def remove_friend(person, friend)
   person[:friends].delete(friend)
- return person[:friends].length
+  return person[:friends].length
 end
 
 def total_money(array)
@@ -49,8 +49,8 @@ def no_friends(array)
   friend_array = []
   for number in array
     if number[:friends].length == 0
-    friend_array.push(number[:name])
-  end
+      friend_array.push(number[:name])
+    end
   end
   return friend_array
 end

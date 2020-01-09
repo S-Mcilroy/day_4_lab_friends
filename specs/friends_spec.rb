@@ -93,10 +93,10 @@ class TestFriends < MiniTest::Test
   # 4. For a given person, add a new name to their list of friends
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
-def test_add_friend
-  result = add_friend(@person2, "Scrappy-Doo")
-  assert_equal(2, result)
-end
+  def test_add_friend
+    result = add_friend(@person2, "Scrappy-Doo")
+    assert_equal(2, result)
+  end
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
@@ -128,10 +128,10 @@ end
     result = everyone_snacks(@people)
     assert_equal(["charcuterie", "soup", "bread", "Scooby snacks", "spaghetti", "ratatouille", "spinach"], result)
   end
-  #
+
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
-  
+
   def test_no_friends
     result = no_friends(@people)
     assert_equal(["Daphne"], result)
